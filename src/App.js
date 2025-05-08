@@ -50,8 +50,8 @@ function App() {
                          window.navigator.standalone || 
                          document.referrer.includes('android-app://');    
     
-    // Set a longer splash screen duration for standalone mode (launched from home screen)
-    const splashDuration = isStandalone ? 3000 : 2000;
+    // Set splash screen duration to 3 seconds for all launch methods
+    const splashDuration = 3000;
     
     // Hide splash screen after the duration
     const timer = setTimeout(() => {
