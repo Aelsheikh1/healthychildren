@@ -43,24 +43,18 @@ function App() {
     };
   }, []);
 
-  // Check if this is the first visit or a returning user
+  // Always show splash screen on app start
   useEffect(() => {
-    const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
-    if (hasVisitedBefore) {
-      // Skip splash screen for returning users
+    // Hide splash screen after 3 seconds
+    const timer = setTimeout(() => {
       setShowSplash(false);
-    } else {
-      // Set flag for future visits
-      localStorage.setItem('hasVisitedBefore', 'true');
-    }
+    }, 3000);
+    
+    return () => clearTimeout(timer);
   }, []);
 
-  const handleSplashFinished = () => {
-    setShowSplash(false);
-  };
-
   if (showSplash) {
-    return <SplashScreen onFinished={handleSplashFinished} />;
+    return <SplashScreen onFinished={() => setShowSplash(false)} />;
   }
 
   return (

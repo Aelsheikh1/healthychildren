@@ -11,7 +11,7 @@ const SplashScreen = ({ onFinished }) => {
       
       // After fade out animation completes, call onFinished
       setTimeout(() => {
-        onFinished();
+        if (onFinished) onFinished();
       }, 500); // 500ms for fade out animation
     }, 2500);
 
@@ -21,10 +21,8 @@ const SplashScreen = ({ onFinished }) => {
   return (
     <div className={`splash-screen ${fadeOut ? 'fade-out' : ''}`}>
       <div className="splash-content">
-        <div className="splash-logo">
-          <div className="food-icon">🍎</div>
-          <div className="food-icon delayed-1">🥦</div>
-          <div className="food-icon delayed-2">🥕</div>
+        <div className="splash-image">
+          <img src="/splash.png" alt="وجبة في معلومة" className="splash-img" />
         </div>
         <h1 className="splash-title">وجبة في معلومة</h1>
         <p className="splash-tagline">تعلم الغذاء الصحي بطريقة ممتعة</p>
