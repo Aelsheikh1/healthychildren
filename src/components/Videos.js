@@ -9,7 +9,7 @@ const Videos = () => {
   const processVideos = async () => {
     try {
       console.log('Processing videos...');
-      const response = await fetch('http://localhost:3001/process-videos');
+      const response = await fetch('/api/process-videos');
       if (!response.ok) {
         console.error('Failed to process videos:', response.statusText);
         throw new Error('Failed to process videos');
@@ -25,7 +25,7 @@ const Videos = () => {
   const fetchVideos = async () => {
     try {
       console.log('Fetching videos.json...');
-      const response = await fetch('http://localhost:3001/data/videos.json');
+      const response = await fetch('/data/videos.json');
       if (!response.ok) {
         console.error('Failed to fetch videos:', response.statusText);
         throw new Error('Failed to fetch videos');
@@ -55,13 +55,12 @@ const Videos = () => {
 
   return (
     <div className="videos-container">
+      <h2 className="section-title">الفيديوهات التعليمية</h2>
       <div className="refresh-button-container">
-        <button className="refresh-button" onClick={processVideos}>
+        <button className="refresh-button" onClick={processVideos} aria-label="تحديث القائمة">
           <i className="video-icon">🔄</i>
-          تحديث القائمة
         </button>
       </div>
-      <h2 className="section-title">الفيديوهات التعليمية</h2>
       {videos.length === 0 ? (
         <div className="no-videos-message">
           <p>لا توجد فيديوهات متاحة حالياً</p>

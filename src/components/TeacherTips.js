@@ -12,14 +12,37 @@ const TeacherTips = () => {
     fetchTips();
   }, []);
 
+  const processTips = async () => {
+    try {
+      console.log('Processing tips...');
+      const response = await fetch('/api/process-tips');
+      if (!response.ok) {
+        console.error('Failed to process tips:', response.statusText);
+        throw new Error('Failed to process tips');
+      }
+      
+      // Fetch the updated tips after processing
+      fetchTips();
+    } catch (error) {
+      console.error('Error processing tips:', error);
+    }
+  };
+
   const fetchTips = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/tips');
-      if (!response.ok) throw new Error('Failed to fetch tips');
+      console.log('Fetching tips.json...');
+      const response = await fetch('/data/tips.json');
+      if (!response.ok) {
+        console.error('Failed to fetch tips:', response.statusText);
+        throw new Error('Failed to fetch tips');
+      }
+      
       const data = await response.json();
+      console.log('Received tips:', data);
       setTips(data.tips || []);
       setLoading(false);
     } catch (error) {
+      console.error('Error fetching tips:', error);
       setTips([]);
       setLoading(false);
     }
