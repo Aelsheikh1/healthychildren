@@ -1,0 +1,445 @@
+.nutrition-quiz-game {
+  font-family: 'Tajawal', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.quiz-container {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header {
+  margin-bottom: 24px;
+}
+
+.progress-container {
+  margin-bottom: 16px;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+.question-counter {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  font-weight: 500;
+}
+
+.question-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.food-display {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.food-icon {
+  font-size: 120px;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.food-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.question-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.hint-btn {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.hint-btn:hover {
+  background-color: #e9ecef;
+}
+
+.hint-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #555;
+  width: 100%;
+  max-width: 500px;
+}
+
+.hint-icon {
+  color: #6c757d;
+  font-size: 18px;
+}
+
+.answer-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.answer-btn {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.true-btn {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.false-btn {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.true-btn:hover:not(:disabled) {
+  background-color: #d4edda;
+}
+
+.false-btn:hover:not(:disabled) {
+  background-color: #f8d7da;
+}
+
+.answer-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.answer-btn.correct {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.answer-btn.incorrect {
+  background-color: #F44336;
+  color: white;
+}
+
+.answer-icon {
+  font-size: 18px;
+}
+
+.feedback-box {
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 0.3s ease;
+}
+
+.feedback-box.correct {
+  background-color: #e8f5e9;
+  border-left: 4px solid #4CAF50;
+}
+
+.feedback-box.incorrect {
+  background-color: #ffebee;
+  border-left: 4px solid #F44336;
+}
+
+.feedback-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.feedback-box.correct .feedback-icon {
+  color: #4CAF50;
+}
+
+.feedback-box.incorrect .feedback-icon {
+  color: #F44336;
+}
+
+.feedback-content {
+  flex: 1;
+}
+
+.feedback-text {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.feedback-detail {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.try-again {
+  font-weight: 700;
+  color: #d32f2f;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.result-container {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+  margin-bottom: 24px;
+}
+
+.trophy-icon {
+  font-size: 72px;
+  color: #FFC107;
+  margin-bottom: 16px;
+}
+
+.result-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.score-display {
+  margin-bottom: 24px;
+}
+
+.score-value {
+  font-size: 42px;
+  font-weight: 700;
+  color: #4CAF50;
+  margin-bottom: 16px;
+}
+
+.score-percentage {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.percentage-bar {
+  flex: 1;
+  height: 12px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.percentage-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 1s ease;
+}
+
+.score-percentage span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.feedback-message {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.restart-btn {
+  padding: 16px 32px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.restart-btn:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+.btn-icon {
+  font-size: 18px;
+}
+
+.celebration-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.celebration-box {
+  background-color: white;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  animation: popIn 0.5s ease;
+}
+
+.celebration-icon {
+  font-size: 60px;
+  color: #4CAF50;
+  margin-bottom: 16px;
+  animation: pulse 1.5s infinite;
+}
+
+.celebration-box h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.celebration-box p {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .nutrition-quiz-game {
+    padding: 16px;
+  }
+  
+  .food-icon {
+    width: 160px;
+    height: 160px;
+    font-size: 100px;
+  }
+  
+  .food-name {
+    font-size: 22px;
+  }
+  
+  .question-text {
+    font-size: 22px;
+  }
+  
+  .answer-buttons {
+    flex-direction: column;
+  }
+  
+  .answer-btn {
+    width: 100%;
+  }
+  
+  .result-header h2 {
+    font-size: 24px;
+  }
+  
+  .score-value {
+    font-size: 36px;
+  }
+  
+  .feedback-message {
+    font-size: 18px;
+  }
+  
+  .restart-btn {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}

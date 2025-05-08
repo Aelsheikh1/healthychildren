@@ -1,0 +1,62 @@
+[
+  {
+    "id": "healthy-1",
+    "name": "بيض",
+    "type": "healthy",
+    "image": "/images/healthy-food-sorting/healthy/بيض.png"
+  },
+  {
+    "id": "healthy-2",
+    "name": "خضروات",
+    "type": "healthy",
+    "image": "/images/healthy-food-sorting/healthy/خضروات.png"
+  },
+  {
+    "id": "healthy-3",
+    "name": "فاكهة",
+    "type": "healthy",
+    "image": "/images/healthy-food-sorting/healthy/فاكهة.png"
+  },
+  {
+    "id": "healthy-4",
+    "name": "لبن",
+    "type": "healthy",
+    "image": "/images/healthy-food-sorting/healthy/لبن.png"
+  },
+  {
+    "id": "healthy-5",
+    "name": "لحم",
+    "type": "healthy",
+    "image": "/images/healthy-food-sorting/healthy/لحم.png"
+  },
+  {
+    "id": "unhealthy-1",
+    "name": "برجر",
+    "type": "unhealthy",
+    "image": "/images/healthy-food-sorting/not-healthy/برجر.png"
+  },
+  {
+    "id": "unhealthy-2",
+    "name": "بيبسي",
+    "type": "unhealthy",
+    "image": "/images/healthy-food-sorting/not-healthy/بيبسي.png"
+  },
+  {
+    "id": "unhealthy-3",
+    "name": "بيتزا",
+    "type": "unhealthy",
+    "image": "/images/healthy-food-sorting/not-healthy/بيتزا.png"
+  },
+  {
+    "id": "unhealthy-4",
+    "name": "حلويات",
+    "type": "unhealthy",
+    "image": "/images/healthy-food-sorting/not-healthy/حلويات.png"
+  },
+  {
+    "id": "unhealthy-5",
+    "name": "كاندي",
+    "type": "unhealthy",
+    "image": "/images/healthy-food-sorting/not-healthy/كاندي.png"
+  }
+]
