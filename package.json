@@ -48,7 +48,7 @@
     "watch-foods": "chokidar \"public/images/healthy-food-sorting/healthy/*.png\" \"public/images/healthy-food-sorting/not-healthy/*.png\" -c \"node scripts/generate-foods-json.js\"",
     "start-react": "react-scripts start",
     "start": "npm-run-all --parallel watch-foods process-tips process-videos start-react",
-    "build": "npm run generate-foods-json && react-scripts build",
+    "build": "npm run generate-foods-json && npm run process-tips && npm run process-videos && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "process-tips": "node ./scripts/process-tips.js",
