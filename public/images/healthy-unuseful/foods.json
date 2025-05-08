@@ -1,0 +1,62 @@
+[
+  {
+    "id": "useful-1",
+    "name": "باستا",
+    "type": "useful",
+    "image": "/images/healthy-unuseful/healthy-useful/باستا.png"
+  },
+  {
+    "id": "useful-2",
+    "name": "تفاح",
+    "type": "useful",
+    "image": "/images/healthy-unuseful/healthy-useful/تفاح.png"
+  },
+  {
+    "id": "useful-3",
+    "name": "خضروات",
+    "type": "useful",
+    "image": "/images/healthy-unuseful/healthy-useful/خضروات.png"
+  },
+  {
+    "id": "useful-4",
+    "name": "دجاج مشوي",
+    "type": "useful",
+    "image": "/images/healthy-unuseful/healthy-useful/دجاج مشوي.png"
+  },
+  {
+    "id": "useful-5",
+    "name": "فلفل",
+    "type": "useful",
+    "image": "/images/healthy-unuseful/healthy-useful/فلفل.png"
+  },
+  {
+    "id": "useful-6",
+    "name": "لحم مشوي",
+    "type": "useful",
+    "image": "/images/healthy-unuseful/healthy-useful/لحم مشوي.png"
+  },
+  {
+    "id": "useful-7",
+    "name": "يوسفي",
+    "type": "useful",
+    "image": "/images/healthy-unuseful/healthy-useful/يوسفي.png"
+  },
+  {
+    "id": "unuseful-1",
+    "name": "دونات",
+    "type": "unuseful",
+    "image": "/images/healthy-unuseful/healthy-unusufal/دونات.png"
+  },
+  {
+    "id": "unuseful-2",
+    "name": "فرايز",
+    "type": "unuseful",
+    "image": "/images/healthy-unuseful/healthy-unusufal/فرايز.png"
+  },
+  {
+    "id": "unuseful-3",
+    "name": "كاندي",
+    "type": "unuseful",
+    "image": "/images/healthy-unuseful/healthy-unusufal/كاندي.png"
+  }
+]
