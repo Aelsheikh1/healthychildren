@@ -39,6 +39,34 @@ body, html {
   gap: 1rem;
 }
 
+@media (max-width: 768px) {
+  .dashboard-buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .dashboard-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  
+  .dashboard-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dashboard-button {
+    min-height: 120px;
+  }
+  
+  .button-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
 .dashboard-button {
   flex: 1;
   background-color: #f1f8ff;
@@ -53,8 +81,8 @@ body, html {
   color: inherit;
   min-height: 200px;
   justify-content: center;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 .dashboard-button:hover {
@@ -83,6 +111,6 @@ body, html {
   font-weight: 500;
   color: #2c3e50;
   text-align: center;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
 }

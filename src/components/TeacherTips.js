@@ -31,9 +31,7 @@ const TeacherTips = () => {
     <div className="teacher-tips">
       <div className="header">
         <h2>نصائح المعلم</h2>
-        <button className="manage-tips-button" onClick={() => window.location.href = '/manage-tips'}>
-          <FaCog /> إدارة النصائح
-        </button>
+        {/* Management button hidden as requested */}
       </div>
       {loading ? (
         <div className="loading">
