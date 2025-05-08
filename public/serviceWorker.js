@@ -12,7 +12,6 @@ const urlsToCache = [
   '/favicon.ico',
   '/favicon-16x16.png',
   '/favicon-32x32.png',
-  '/splash.png',
   '/maskable_icon.png'
 ];
 

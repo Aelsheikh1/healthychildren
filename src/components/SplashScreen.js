@@ -21,8 +21,10 @@ const SplashScreen = ({ onFinished }) => {
   return (
     <div className={`splash-screen ${fadeOut ? 'fade-out' : ''}`}>
       <div className="splash-content">
-        <div className="splash-image">
-          <img src="/splash.png" alt="وجبة في معلومة" className="splash-img" />
+        <div className="splash-logo">
+          <div className="food-icon">🍎</div>
+          <div className="food-icon delayed-1">🥦</div>
+          <div className="food-icon delayed-2">🥕</div>
         </div>
         <h1 className="splash-title">وجبة في معلومة</h1>
         <p className="splash-tagline">تعلم الغذاء الصحي بطريقة ممتعة</p>
