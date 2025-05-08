@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
 import './i18n';
+import SplashScreen from './components/SplashScreen';
 
 import LandingPage from './components/LandingPage';
 import Dashboard from './components/Dashboard';
@@ -20,8 +21,10 @@ import NutritionQuizGame from './components/NutritionQuizGame';
 import FoodColoringGame from './components/FoodColoringGame';
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+  
   // Listen for content updates
-  React.useEffect(() => {
+  useEffect(() => {
     // Listen for content processed message
     window.addEventListener('message', (event) => {
       if (event.data && event.data.type === 'CONTENT_PROCESSED') {
@@ -39,6 +42,26 @@ function App() {
       });
     };
   }, []);
+
+  // Check if this is the first visit or a returning user
+  useEffect(() => {
+    const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
+    if (hasVisitedBefore) {
+      // Skip splash screen for returning users
+      setShowSplash(false);
+    } else {
+      // Set flag for future visits
+      localStorage.setItem('hasVisitedBefore', 'true');
+    }
+  }, []);
+
+  const handleSplashFinished = () => {
+    setShowSplash(false);
+  };
+
+  if (showSplash) {
+    return <SplashScreen onFinished={handleSplashFinished} />;
+  }
 
   return (
     <Router>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background for maskable icon - larger safe zone -->
+  <rect width="512" height="512" fill="#4CAF50"/>
+  
+  <!-- Content positioned in safe zone for maskable icons -->
+  <g transform="translate(56, 56) scale(0.78)">
+    <!-- Inner Circle -->
+    <circle cx="256" cy="256" r="220" fill="#388E3C"/>
+    
+    <!-- Apple Shape -->
+    <path d="M256 120C290 120 320 150 320 190C320 230 290 260 256 260C222 260 192 230 192 190C192 150 222 120 256 120Z" fill="#FF5252"/>
+    <path d="M256 120C290 120 320 150 320 190C320 230 290 260 256 260" fill="#D32F2F"/>
+    <path d="M256 260C222 260 192 230 192 190" fill="#FFCDD2"/>
+    
+    <!-- Apple Stem -->
+    <path d="M256 120C256 100 266 80 286 70" stroke="#795548" stroke-width="12" stroke-linecap="round"/>
+    
+    <!-- Apple Leaf -->
+    <path d="M286 70C300 80 320 70 330 60C310 90 290 80 286 70Z" fill="#4CAF50"/>
+    
+    <!-- Carrot -->
+    <path d="M160 320L200 380L240 320" fill="#FF9800"/>
+    <path d="M200 380L200 280" stroke="#FF9800" stroke-width="30" stroke-linecap="round"/>
+    <path d="M180 300L220 300" stroke="#FF9800" stroke-width="8" stroke-linecap="round"/>
+    <path d="M170 320L230 320" stroke="#FF9800" stroke-width="8" stroke-linecap="round"/>
+    <path d="M180 340L220 340" stroke="#FF9800" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Broccoli -->
+    <path d="M320 320C340 300 360 300 380 320C360 340 340 340 320 320Z" fill="#4CAF50"/>
+    <path d="M300 340C320 320 340 320 360 340C340 360 320 360 300 340Z" fill="#4CAF50"/>
+    <path d="M340 300C360 280 380 280 400 300C380 320 360 320 340 300Z" fill="#4CAF50"/>
+    <path d="M350 350L350 400" stroke="#795548" stroke-width="15" stroke-linecap="round"/>
+    
+    <!-- Arabic Text "وجبة في معلومة" stylized -->
+    <path d="M180 440C200 420 220 420 240 440C220 460 200 460 180 440Z" fill="white"/>
+    <path d="M260 440C280 420 300 420 320 440C300 460 280 460 260 440Z" fill="white"/>
+    <path d="M340 440C360 420 380 420 400 440C380 460 360 460 340 440Z" fill="white"/>
+  </g>
+</svg>

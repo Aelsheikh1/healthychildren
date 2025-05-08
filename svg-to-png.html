@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG to PNG Converter</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; }
+    .result { margin-top: 20px; }
+    canvas { border: 1px solid #ddd; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SVG to PNG Converter</h1>
+    <p>This tool converts the SVG logos to PNG files for the PWA.</p>
+    
+    <div class="result">
+      <h2>Regular Icon (512x512)</h2>
+      <div id="result512"></div>
+      <canvas id="canvas512" width="512" height="512"></canvas>
+      <a id="download512" download="logo512.png">Download logo512.png</a>
+    </div>
+    
+    <div class="result">
+      <h2>Medium Icon (192x192)</h2>
+      <div id="result192"></div>
+      <canvas id="canvas192" width="192" height="192"></canvas>
+      <a id="download192" download="logo192.png">Download logo192.png</a>
+    </div>
+    
+    <div class="result">
+      <h2>Maskable Icon (512x512)</h2>
+      <div id="resultMaskable"></div>
+      <canvas id="canvasMaskable" width="512" height="512"></canvas>
+      <a id="downloadMaskable" download="maskable_icon.png">Download maskable_icon.png</a>
+    </div>
+    
+    <div class="result">
+      <h2>Favicon (64x64)</h2>
+      <div id="resultFavicon"></div>
+      <canvas id="canvasFavicon" width="64" height="64"></canvas>
+      <a id="downloadFavicon" download="favicon.png">Download favicon.png</a>
+    </div>
+  </div>
+
+  <script>
+    // Function to convert SVG to PNG
+    function convertSvgToPng(svgUrl, canvasId, downloadId, callback) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
+      
+      img.onload = function() {
+        // Clear canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw image on canvas
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        
+        // Create download link
+        const downloadLink = document.getElementById(downloadId);
+        downloadLink.href = canvas.toDataURL('image/png');
+        
+        if (callback) callback();
+      };
+      
+      img.src = svgUrl;
+    }
+
+    // Convert regular icon
+    convertSvgToPng('public/logo.svg', 'canvas512', 'download512');
+    
+    // Convert medium icon
+    convertSvgToPng('public/logo.svg', 'canvas192', 'download192');
+    
+    // Convert maskable icon
+    convertSvgToPng('public/maskable_icon.svg', 'canvasMaskable', 'downloadMaskable');
+    
+    // Convert favicon
+    convertSvgToPng('public/logo.svg', 'canvasFavicon', 'downloadFavicon');
+  </script>
+</body>
+</html>
