@@ -5,15 +5,15 @@ const SplashScreen = ({ onFinished }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // Show splash screen for 3 seconds before starting fade out
+    // Show splash screen for 2.5 seconds before starting fade out
     const timer = setTimeout(() => {
       setFadeOut(true);
       
       // After fade out animation completes, call onFinished
       setTimeout(() => {
         if (onFinished) onFinished();
-      }, 500); // 500ms for fade out animation
-    }, 3000);
+      }, 500); // 500ms for fade out animation (total 3 seconds)
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, [onFinished]);

@@ -45,21 +45,10 @@ function App() {
 
   // Always show splash screen on app start
   useEffect(() => {
-    // Check if app was launched from home screen
-    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || 
-                         window.navigator.standalone || 
-                         document.referrer.includes('android-app://');    
-    
-    // Set splash screen duration to 3 seconds for all launch methods
-    const splashDuration = 3000;
-    
-    // Hide splash screen after the duration
+    // Always show splash screen for 3 seconds
     const timer = setTimeout(() => {
       setShowSplash(false);
-    }, splashDuration);
-    
-    // Store in session storage that we've shown the splash screen
-    sessionStorage.setItem('splashShown', 'true');
+    }, 3000);
     
     return () => clearTimeout(timer);
   }, []);
