@@ -50,9 +50,15 @@ window.addEventListener('load', async () => {
   }
 });
 
-// Register service worker
+// Register service worker and prevent default splash screen
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
+    // Hide any default splash screen immediately
+    if (navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
+      document.documentElement.style.background = 'transparent';
+      document.body.style.background = 'transparent';
+    }
+    
     navigator.serviceWorker.register('/serviceWorker.js')
       .then(registration => {
         console.log('ServiceWorker registration successful');

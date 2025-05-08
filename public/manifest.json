@@ -37,7 +37,7 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#4CAF50",
-  "background_color": "#388E3C",
+  "background_color": "transparent",
   "dir": "rtl",
   "lang": "ar",
   "orientation": "portrait"
